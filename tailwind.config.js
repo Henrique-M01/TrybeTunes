@@ -6,7 +6,10 @@ module.exports = {
     extend: {
       boxShadow: {
         '3xl': '0 35px 60px -15px black',
-      }
+      },
+      colors: {
+        'primary-1': '#243c5a',
+      },
     },
   },
   plugins: [],

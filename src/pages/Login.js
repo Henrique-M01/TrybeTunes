@@ -74,7 +74,7 @@ class Login extends React.Component {
           disabled={ isDisableBtn }
           type="button"
           onClick={ this.clickAndLoading }
-          className="font-sans text-xl text-gray-700 rounded-md mx-auto w-96 h-14 mb-16 bg-indigo-50 border-gray-200 hover:bg-indigo-100 cursor-pointer"
+          className="font-sans text-xl font-bold text-gray-700 rounded-md mx-auto w-96 h-14 mb-16 bg-indigo-50 border-gray-200 hover:bg-indigo-100 cursor-pointer"
         >
           Entrar
         </button>
