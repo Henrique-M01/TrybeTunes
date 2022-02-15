@@ -71,31 +71,33 @@ class Album extends React.Component {
     return (
       <>
         <Header />
-        <div data-testid="page-album">
+        <div>
           {isLoading ? <Loading />
             : requestAlbum.length > 0
           && (
-            <div>
+            <div className="flex flex-wrap justify-between mx-28">
               <img
                 src={ requestAlbum[0].atworkUrl100 }
                 alt={ requestAlbum[0].collectionName }
               />
-              <h4 data-testid="artist-name">{ requestAlbum[0].artistName }</h4>
-              <h4 data-testid="album-name">{ requestAlbum[0].collectionName }</h4>
+              <h1 className="my-10 text-2xl font-semibold">{ requestAlbum[0].artistName }</h1>
+              <h1 className="my-10 text-xl font-semibold">{ requestAlbum[0].collectionName }</h1>
             </div>
           )}
-          { requestAlbum
-            .filter((music) => music.trackId)
-            .map((music) => (
-              <MusicCard
-                key={ music.trackId }
-                musicName={ music.trackName }
-                musicURL={ music.previewUrl }
-                musicId={ music.trackId }
-                onClick={ this.addAndRemoveFavoritesMusic }
-                checked={ this.isChecked }
-              />
-            ))}
+          <div className="flex flex-col flex-nowrap items-center">
+            { requestAlbum
+              .filter((music) => music.trackId)
+              .map((music) => (
+                <MusicCard
+                  key={ music.trackId }
+                  musicName={ music.trackName }
+                  musicURL={ music.previewUrl }
+                  musicId={ music.trackId }
+                  onClick={ this.addAndRemoveFavoritesMusic }
+                  checked={ this.isChecked }
+                />
+              ))}
+          </div>
         </div>
       </>
     );
