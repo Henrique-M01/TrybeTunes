@@ -1,4 +1,4 @@
-# TrybeTune- app de musica
+# TrybeTunes - app de musica
 
 # Contexto
 Este projeto trata-se de um aplicativo de musica, usando a API do ITunes, permite que o usuário ouça uma previa da musica escolhida e tambem favorite-a.
